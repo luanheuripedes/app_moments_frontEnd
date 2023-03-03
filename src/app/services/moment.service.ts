@@ -14,7 +14,7 @@ export class MomentService {
   constructor(private http: HttpClient) {}
 
   createMoment(formData: FormData): Observable<FormData> {
-    debugger;
+    console.log('esta sendo enviado através do elemento Pai');
     return this.http.post<FormData>(this.apiUrl, formData);
   }
 }
