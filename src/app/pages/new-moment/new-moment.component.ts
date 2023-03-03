@@ -13,7 +13,7 @@ export class NewMomentComponent {
   constructor(private momentService: MomentService) {}
 
   async createHandler(moment: Moment) {
-    console.log('createHandler - Chegou no pai ' + moment);
+    console.log('createHandler - Chegou no pai como momento ' + moment);
 
     const formData = new FormData();
 
@@ -24,14 +24,13 @@ export class NewMomentComponent {
       formData.set('image', moment.image);
     }
     debugger;
-    console.log('formData - no Filho ele virou FormData: ' + formData.getAll);
+    console.log('formData - no Pai ele virou FormData: ' + formData);
 
     // todo
 
     //enviar para o service
     this.momentService.createMoment(formData).subscribe({
       next: (response) => {
-        debugger;
         console.log('next:' + response);
       },
       error: (error) => {

@@ -43,9 +43,10 @@ export class MomentFormComponent implements OnInit {
     if (this.momentForm.invalid) {
       return;
     }
-    console.log('Saiu do filho' + this.momentForm.value);
+
     console.log(this.momentForm.value);
 
+    console.log('Saiu do filho como forma de emição' + this.momentForm.value);
     this.onSubmit.emit(this.momentForm.value);
   }
 }
