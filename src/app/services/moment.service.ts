@@ -21,4 +21,9 @@ export class MomentService {
   getAllMoments(): Observable<Response<Moment[]>> {
     return this.http.get<Response<Moment[]>>(this.apiUrl);
   }
+
+  getMoment(id: Number): Observable<Response<Moment>> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<Response<Moment>>(url);
+  }
 }
