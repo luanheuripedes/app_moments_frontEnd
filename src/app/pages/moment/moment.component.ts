@@ -21,7 +21,7 @@ import { Comment } from 'src/app/Interfaces/Comment';
 })
 export class MomentComponent implements OnInit {
   moment?: Moment;
-  baseApiUril = environment.baseApiUrl;
+  baseApiUrl = environment.baseApiUrl;
   faTimes = faTimes;
   faEdit = faEdit;
 
@@ -75,16 +75,18 @@ export class MomentComponent implements OnInit {
   }
 
   onSubmit(formDirective: FormGroupDirective) {
+    debugger;
     if (this.commentForm.invalid) {
       return;
     }
 
-    const data: Comment = this.commentForm.value();
+    const data: Comment = this.commentForm.value;
 
     data.momentId = Number(this.moment!.id);
 
     this.commentService.createComment(data).subscribe({
       next: (response) => {
+        debugger;
         this.moment!.comments!.push(response.data);
         this.messageService.add('Comentário adicionado!');
 
