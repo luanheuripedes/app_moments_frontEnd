@@ -58,8 +58,9 @@ img {
 
 .comment-form form {
   margin-top: 1em;
-  text-align: center;
+  text-align: left;
   max-width: 300px;
+  margin-left: 0;
 }
 
 .author span {
