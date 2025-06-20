@@ -179,7 +179,7 @@ A aplicação estará disponível em `http://localhost:4200`
 - [x] Error handling
 - [x] Acessibilidade (a11y)
 
-## 📱 Componentes Principais
+## Componentes Principais
 
 ### MomentCardComponent
 ```typescript
